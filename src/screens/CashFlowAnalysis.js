@@ -237,9 +237,7 @@ export default class CashFlowAnalysis extends Component {
     collection.education = this.state.education;
     collection.loanInstallment = this.state.loanInstallment;
     collection.OtherExp = this.state.OtherExp;
-
-    //var url = `https://hss.jeevanbikasdairy.com/api/cashflow.php`;
-    var url = `http://192.168.1.68:81/hss/api/cashflow.php`;
+    var url = `https://hss.habitatnepal.org/api/cashflow.php`;
     fetch(url, {
       method: 'POST', // or 'PUT'
       headers: {
@@ -256,7 +254,7 @@ export default class CashFlowAnalysis extends Component {
             "Successful Alert Box",
             res.Message,
             [
-              { text: "OK", onPress: () => console.log("OK Pressed") }
+              { text: "OK", onPress: () => this.props.navigation.navigate('Home') }
             ],
             { cancelable: false }
           );
