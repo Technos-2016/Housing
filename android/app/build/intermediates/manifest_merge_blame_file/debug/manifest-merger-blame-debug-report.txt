@@ -1,0 +1,112 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.housing"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="28" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->E:\Housing\android\app\src\debug\AndroidManifest.xml:5:5-77
+11-->E:\Housing\android\app\src\debug\AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->E:\Housing\android\app\src\main\AndroidManifest.xml:4:5-67
+12-->E:\Housing\android\app\src\main\AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->E:\Housing\android\app\src\main\AndroidManifest.xml:5:5-64
+13-->E:\Housing\android\app\src\main\AndroidManifest.xml:5:22-62
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->E:\Housing\android\app\src\main\AndroidManifest.xml:6:5-80
+14-->E:\Housing\android\app\src\main\AndroidManifest.xml:6:22-78
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->E:\Housing\android\app\src\main\AndroidManifest.xml:7:5-78
+15-->E:\Housing\android\app\src\main\AndroidManifest.xml:7:22-76
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.google.android.exoplayer:exoplayer-core:2.9.3] C:\Users\Dell\.gradle\caches\transforms-2\files-2.1\1bfc034a10aaae6efc6defffa3808574\jetified-exoplayer-core-2.9.3\AndroidManifest.xml:24:5-79
+16-->[com.google.android.exoplayer:exoplayer-core:2.9.3] C:\Users\Dell\.gradle\caches\transforms-2\files-2.1\1bfc034a10aaae6efc6defffa3808574\jetified-exoplayer-core-2.9.3\AndroidManifest.xml:24:22-76
+17
+18    <application
+18-->E:\Housing\android\app\src\main\AndroidManifest.xml:10:5-30:19
+19        android:name="com.housing.MainApplication"
+19-->E:\Housing\android\app\src\main\AndroidManifest.xml:11:13-44
+20        android:allowBackup="false"
+20-->E:\Housing\android\app\src\main\AndroidManifest.xml:15:13-40
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.1.0] C:\Users\Dell\.gradle\caches\transforms-2\files-2.1\1cd7eff88f5e86d0249af2958bf465f0\core-1.1.0\AndroidManifest.xml:24:18-86
+22        android:debuggable="true"
+23        android:icon="@mipmap/ic_launcher"
+23-->E:\Housing\android\app\src\main\AndroidManifest.xml:13:13-47
+24        android:label="@string/app_name"
+24-->E:\Housing\android\app\src\main\AndroidManifest.xml:12:13-45
+25        android:roundIcon="@mipmap/ic_launcher_round"
+25-->E:\Housing\android\app\src\main\AndroidManifest.xml:14:13-58
+26        android:theme="@style/AppTheme"
+26-->E:\Housing\android\app\src\main\AndroidManifest.xml:16:13-44
+27        android:usesCleartextTraffic="true" >
+27-->E:\Housing\android\app\src\debug\AndroidManifest.xml:7:18-53
+28        <activity
+28-->E:\Housing\android\app\src\main\AndroidManifest.xml:18:9-28:20
+29            android:name="com.housing.MainActivity"
+29-->E:\Housing\android\app\src\main\AndroidManifest.xml:19:17-45
+30            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+30-->E:\Housing\android\app\src\main\AndroidManifest.xml:21:17-87
+31            android:label="@string/app_name"
+31-->E:\Housing\android\app\src\main\AndroidManifest.xml:20:17-49
+32            android:screenOrientation="portrait"
+32-->E:\Housing\android\app\src\main\AndroidManifest.xml:22:17-53
+33            android:windowSoftInputMode="adjustResize" >
+33-->E:\Housing\android\app\src\main\AndroidManifest.xml:23:17-59
+34            <intent-filter>
+34-->E:\Housing\android\app\src\main\AndroidManifest.xml:24:13-27:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->E:\Housing\android\app\src\main\AndroidManifest.xml:25:17-69
+35-->E:\Housing\android\app\src\main\AndroidManifest.xml:25:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->E:\Housing\android\app\src\main\AndroidManifest.xml:26:17-77
+37-->E:\Housing\android\app\src\main\AndroidManifest.xml:26:27-74
+38            </intent-filter>
+39        </activity>
+40        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+40-->E:\Housing\android\app\src\main\AndroidManifest.xml:29:9-86
+40-->E:\Housing\android\app\src\main\AndroidManifest.xml:29:19-83
+41
+42        <provider
+42-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-18:20
+43            android:name="com.imagepicker.FileProvider"
+43-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-56
+44            android:authorities="com.housing.provider"
+44-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-60
+45            android:exported="false"
+45-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-37
+46            android:grantUriPermissions="true" >
+46-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-47
+47            <meta-data
+47-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+48                android:name="android.support.FILE_PROVIDER_PATHS"
+48-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+49                android:resource="@xml/provider_paths" />
+49-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+50        </provider>
+51        <provider
+51-->[:react-native-webview] E:\Housing\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+52            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+52-->[:react-native-webview] E:\Housing\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
+53            android:authorities="com.housing.fileprovider"
+53-->[:react-native-webview] E:\Housing\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
+54            android:exported="false"
+54-->[:react-native-webview] E:\Housing\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+55            android:grantUriPermissions="true" >
+55-->[:react-native-webview] E:\Housing\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
+56            <meta-data
+56-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+57                android:name="android.support.FILE_PROVIDER_PATHS"
+57-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+58                android:resource="@xml/file_provider_paths" />
+58-->[:react-native-image-picker] E:\Housing\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+59        </provider>
+60    </application>
+61
+62</manifest>
