@@ -36,7 +36,7 @@ class CustomDrawerContent extends React.Component {
             <TouchableOpacity style={{ flexDirection: 'row', padding: 10 }}
               onPress={() => this.props.navigation.navigate('About')}>
               <Icon name="md-information-circle-outline" size={28} color='#387' />
-              <Text style={{ left: 15, color: '#000', fontSize: 17, textTransform: 'uppercase' }}>About Us</Text>
+              <Text style={{ left: 15, fontSize: 17, textTransform: 'uppercase' }}>About Us</Text>
             </TouchableOpacity>
           </View>
 
