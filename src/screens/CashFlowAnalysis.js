@@ -12,7 +12,8 @@ import {
   Button,
   Image,
   Platform,
-  PermissionsAndroid
+  PermissionsAndroid,
+  ActivityIndicator
 } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 import ImagePicker from 'react-native-image-picker';
@@ -60,7 +61,8 @@ export default class CashFlowAnalysis extends Component {
       OtherExp: '',
       currentLongitude: 'unknown',
       currentLatitude: 'unknown',
-      Mobile: ''
+      Mobile: '',
+      isLoading: false,
       // vdcs:[],
       // selected_vdc:"",
     };
@@ -97,7 +99,6 @@ export default class CashFlowAnalysis extends Component {
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
-          isLoading: false,
           provinces: responseJson
         });
       })
@@ -144,7 +145,6 @@ export default class CashFlowAnalysis extends Component {
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
-          isLoading: false,
           districts: responseJson
         });
       })
@@ -198,7 +198,11 @@ export default class CashFlowAnalysis extends Component {
     });
   };
 
+
+
+
   submit() {
+
     let collection = {}
     collection.Mobile = this.state.Mobile;
     collection.currentLongitude = this.state.currentLongitude;
@@ -237,6 +241,7 @@ export default class CashFlowAnalysis extends Component {
     collection.education = this.state.education;
     collection.loanInstallment = this.state.loanInstallment;
     collection.OtherExp = this.state.OtherExp;
+    this.setState({ isLoading: true });
     var url = `https://hss.habitatnepal.org/api/cashflow.php`;
     fetch(url, {
       method: 'POST', // or 'PUT'
@@ -249,6 +254,7 @@ export default class CashFlowAnalysis extends Component {
       .then((response) => response.json())
       .then((res) => {
         if (res) {
+          this.setState({ isLoading: false });
           console.log(res.Message);
           Alert.alert(
             "Successful Alert Box",
@@ -334,12 +340,11 @@ export default class CashFlowAnalysis extends Component {
 
             <Picker
               selectedValue={this.state.choosenLabel}
-              onValueChange={(itemValue, itemIndex) =>
-                this.setState({ choosenLabel: itemValue, choosenindex: itemIndex })
-
-              }>
-              <Picker.Item label="Female" value="Female" />
+              onValueChange={(itemValue, itemIndex) => this.setState({ choosenLabel: itemValue })}
+            >
+              <Picker.Item label="Select Gender" value="Please Select Other Value" />
               <Picker.Item label="Male" value="Male" />
+              <Picker.Item label="Female" value="Female" />
             </Picker>
             <TextInput
               placeholder="Spouse Name"
@@ -354,7 +359,7 @@ export default class CashFlowAnalysis extends Component {
               style={styles.TextInput}
             />
             <TextInput
-              placeholder="Father is Law"
+              placeholder="Father in Law"
               onChangeText={fatherInLaw => this.setState({ fatherInLaw })}
               underlineColorAndroid="transparent"
               style={styles.TextInput}
@@ -596,14 +601,13 @@ export default class CashFlowAnalysis extends Component {
             />
             <TouchableOpacity
               style={{ paddingTop: 30 }}
-
             >
               <Text style={{ backgroundColor: '#009387', textAlign: 'center', padding: 7, marginBottom: 130, fontSize: 30, color: '#fff' }}
                 onPress={() => this.submit()}
-              >
-                Submit
-          </Text>
+              >Submit
+              </Text>
             </TouchableOpacity>
+            <ActivityIndicator animating={this.state.isLoading} />
           </ScrollView>
         </View>
 
@@ -626,7 +630,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginTop: 20,
     borderColor: '#009387',
-    borderRadius:5
+    borderRadius: 5
   },
   headerTitle: {
     fontSize: 15,

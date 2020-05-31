@@ -76,7 +76,7 @@ class CustomDrawerContent extends React.Component {
             <TouchableOpacity style={{ flexDirection: 'row', padding: 10 }}
               onPress={() => this.props.navigation.navigate('Suppliers')}>
               <Icon name="md-contacts" size={28} color="#387" />
-              <Text style={{ left: 10, fontSize: 17, textTransform: 'uppercase' }}>Suppliers</Text>
+              <Text style={{ left: 10, fontSize: 17, textTransform: 'uppercase' }}>Suppliers Information</Text>
             </TouchableOpacity>
           </View>
 
@@ -84,17 +84,17 @@ class CustomDrawerContent extends React.Component {
             <TouchableOpacity style={{ flexDirection: 'row', padding: 10 }}
               onPress={() => this.props.navigation.navigate('Contacts')}>
               <Icon name="ios-contacts" size={28} color="#387" />
-              <Text style={{ left: 10, fontSize: 17, textTransform: 'uppercase' }}>Contacts</Text>
+              <Text style={{ left: 10, fontSize: 17, textTransform: 'uppercase' }}>Contacts Us</Text>
             </TouchableOpacity>
           </View>
 
-          <View>
+          {/* <View>
             <TouchableOpacity style={{ flexDirection: 'row', padding: 10 }}
               onPress={() => this.props.navigation.navigate('Technical')}>
               <Icon name="ios-call" size={28} color="#387" />
               <Text style={{ left: 10, fontSize: 17, textTransform: 'uppercase' }}>For Support</Text>
             </TouchableOpacity>
-          </View>
+          </View> */}
 
           <View>
             <TouchableOpacity style={{ flexDirection: 'row', marginTop: 100, padding: 10 }}
@@ -116,8 +116,6 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(CustomDrawerContent);
-
-
 const styles = StyleSheet.create({
   drawerContent: {
     flex: 1,

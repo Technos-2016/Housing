@@ -8,7 +8,7 @@ render(){
     <View style={styles.main}>
       
       <Image style={{height:'100%', width:'100%' }}
-      source={require('../images/Splash.gif')}
+      source={require('../images/Splash3.gif')}
       />
       
     </View>
@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center',
     alignItems:'center',
-    backgroundColor:'#2cafd7'
 },
 
 })
